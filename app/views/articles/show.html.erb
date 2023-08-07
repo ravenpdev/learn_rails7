@@ -1,0 +1,16 @@
+<div class="container">
+  <%= link_to 'Go back to Articles', articles_path %>
+  <div class="bg-light p-4">
+    <h2><%= @article.title %></h2>
+    <p><%= @article.body %></p>
+    <span><%= @article.created_at %></span>
+    <div>
+      <span>
+        <%= link_to 'Edit', edit_article_path(@article) %>
+      </span>
+      <span>
+        <%= link_to 'Destroy', article_path(@article), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>
+      </span>
+    </div>
+  </div>
+</div>
